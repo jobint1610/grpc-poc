@@ -1,6 +1,6 @@
 package org.alm.service;
 
-import com.alm.model.PersonOuterClass;
+import com.alm.model.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,7 +10,7 @@ public class SimpleProtoDemo {
 
   public static void main(String[] args) {
 
-    var person = PersonOuterClass.Person.newBuilder()
+    var person = Person.newBuilder()
             .setName("John Doe")
             .setAge(25)
             .build();
