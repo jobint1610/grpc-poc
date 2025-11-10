@@ -6,4 +6,9 @@ option java_multiple_files = true;
 message Person {
   string name = 1;
   int32 age = 2;
+  string email = 3;
+  bool employed = 4;
+  double salary = 5; // double for more precise salary representation
+  int64 bank_account_number = 6; // int64 for larger account numbers
+  sint32 balance = 7; // Using sint32 for better efficiency with negative numbers
 }
