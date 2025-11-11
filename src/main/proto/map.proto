@@ -3,13 +3,23 @@ syntax = "proto3";
 option java_package = "com.alm.model";
 option java_multiple_files = true;
 
-message Car{
+enum BodyStyle {
+  UNKNOWN = 0;
+  SUV = 1;
+  COUPE = 2;
+  HATCHBACK = 3;
+  CONVERTIBLE = 4;
+  SEDAN = 5;
+}
+
+message Car {
   string make = 1;
   string model = 2;
   int32 year = 3;
+  BodyStyle body_style = 4;
 }
 
-message Dealer{
+message Dealer {
   string name = 1;
   map<int32, Car> inventory = 2; // Map of car model to Car message
 }

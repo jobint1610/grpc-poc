@@ -1,5 +1,6 @@
 package org.alm.service;
 
+import com.alm.model.BodyStyle;
 import com.alm.model.Car;
 import com.alm.model.Dealer;
 import org.slf4j.Logger;
@@ -15,12 +16,14 @@ public class MapProtoDemo {
             .setMake("Honda")
             .setModel("Civic")
             .setYear(2015)
+            .setBodyStyle(BodyStyle.HATCHBACK)
             .build();
 
     var car2 = Car.newBuilder()
             .setMake("Toyota")
             .setModel("Camry")
             .setYear(2018)
+            .setBodyStyle(BodyStyle.SEDAN)
             .build();
 
     var dealer = Dealer.newBuilder()
@@ -30,6 +33,7 @@ public class MapProtoDemo {
             .build();
 
     log.info("dealer: {}", dealer);
+    log.info("body style of car2: {}", car2.getBodyStyle());
 
   }
 }
